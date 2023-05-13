@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>300 Sign in</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="header">
+        <div class="container2">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="imagini/logo/Logo_for_300_Entertainment.png" width="100px">
+                </div>
+                 <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="page2.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                    </ul>
+                 </nav>
+                 <div class="shopbag">
+                     <i class="fa-regular fa-bag-shopping" style="color: red;"></i>
+                 </div>
+            </div>
+    
+    
+             
+        </div>
+        </div>
+    
+    <div class="container">
+        <div class="box form-box">
+            <header>Sign Up</header>
+            <form action="" method="post">
+                <div class="field input">
+                    <label for="name">First and Last name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="field input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" autocomplete="off" onblur="validatePassword(this.value) || alert('Numele de utilizator trebuie să conțină doar caractere alfanumerice!');" required>
+                </div>
+
+                <div class="field input">
+                    <label for="username">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="off" required>
+                </div>
+
+                <div class="field input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" autocomplete="off" onblur="validatePassword(this.value) || alert('Parola trebuie să conțină cel puțin 8 caractere, o literă mare, o literă mică, un număr și un caracter special!');" required>
+                </div>
+
+                <div class="field">
+                    <input type="submit" class="btn" name="submit" value="Sign up" required>
+                </div>
+
+                <div class="links">
+                    You already have an account?<a href="signin.html">Sign In!</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   <!-----------------JS pentru validari-------------------------->
+    <script>
+
+        function validatePassword(password) {
+           const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+           return re.test(password);
+        }
+
+        function validateUsername(username) {
+           const re = /^[a-zA-Z0-9]+$/;
+           return re.test(username);
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
